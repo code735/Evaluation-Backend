@@ -37,6 +37,11 @@ const TodoSchema = new mongoose.Schema({
 
 const Todo = mongoose.model('Todo', TodoSchema);
 
+
+app.get('/',(req,res)=>{
+  res.send("Hello BRO")
+})
+
 app.post('/signup', async (req, res) => {
     try {
       const { name, email, password, ip } = req.body;
